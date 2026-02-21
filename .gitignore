@@ -1,0 +1,47 @@
+# OpenClaw / workspace personal data — NEVER commit these
+workspace-template/memory/
+workspace-template/MEMORY.md          # ← curated facts — user-specific
+workspace-template/*.key
+workspace-template/*.secret
+workspace-template/credentials/
+workspace-template/.openclaw/
+workspace-template/obsidian/          # if using Obsidian skill
+
+# Runtime / temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+
+# Local install artifacts
+node_modules/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Editor / IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Backup / export files created by scripts
+*.tar.gz
+*.zip
+see-knowledge-*.tar.gz
+
+# Credential placeholders (actual creds are never committed)
+credentials.example.json
+credentials.yaml
+
+# Anything the agent might generate in root during testing
+test-*
+scratch-*
+
+# Keep the template clean — only commit what should be copied to new installs
+!workspace-template/skills/           # ← core/custom skills are versioned
+!workspace-template/scripts/          # ← if you add helper scripts later
